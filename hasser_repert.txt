@@ -1,0 +1,90 @@
+--- Grid ---
+.container
+.col-[1-6]-6[-noresp]
+
+
+--- Button Style
+	-- Button Wrappers ---
+	.has-button-default
+	.has-button-success
+	.has-button-error
+	.has-button-warning
+	.has-button-primary
+
+	-- Button States --
+	.is-button-default
+	.is-button-success
+	.is-button-error
+	.is-button-warning
+	.is-button-primary
+
+
+--- Text ---
+    --- Size ---
+    .has-text-small
+    .has-text-large
+    .has-text-larger
+
+    --- Color ---
+    .has-text-default
+    .has-text-success
+    .has-text-error
+    .has-text-warning
+    .has-text-primary
+
+    --- Align ---
+    .has-text-left
+    .has-text-right
+    .has-text-center
+    .has-text-justify
+
+    --- Style ---
+    .has-text-meta
+    .has-text-bold
+    .has-text-italic
+
+
+--- Padding ---
+.has-padding
+.has-padding-large
+.has-padding-larger
+
+.has-no-padding
+.has-no-padding-left
+.has-no-padding-right
+.has-no-padding-bottom
+.has-no-padding-top
+
+
+--- Margin ---
+.has-margin
+.has-margin-large
+.has-margin-larger
+
+.has-no-margin
+.has-no-margin-left
+.has-no-margin-right
+.has-no-margin-bottom
+.has-no-margin-top
+
+
+--- Fill/Border ---
+.has-background-default
+.has-background-primary
+.has-background-success
+.has-background-warning
+.has-background-error
+
+.has-border-default
+.has-border-primary
+.has-border-success
+.has-border-warning
+.has-border-error
+
+
+--- Misc. ---
+.has-animation
+.has-hero
+    .hero-body
+    .hero-body-top
+    .hero-body-bottom
