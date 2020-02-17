@@ -15,6 +15,7 @@ It was difficult to apply a style on a Symfony form without having to create a b
 + Has a hero style, a &lt;div/&gt; that will take all the page width and height
 
 *To see all the available class, consult the file 'hasser_repert.txt'*
+*To see the framework in action, open the file 'documentation.html'*
 
 Don't hesitate to notice me about any issue, so that I can fix it quickly. <br/>
 And you can send me any request or suggestion. <br/>

@@ -212,6 +212,7 @@ input[type="reset"],
 input[type="button"],
 [class*="has-button"] > :first-child,
 [class*="is-button"] {
+  height: 38px;
   padding: 0 30px;
   font-size: 11px;
   font-weight: 600;
@@ -227,6 +228,9 @@ input[type="button"],
   border: 1px solid;
   cursor: pointer;
   outline: none;
+}
+[class*="has-button"] {
+  display: inline-block;
 }
 .has-button-default > :first-child,
 .is-button-default {
@@ -429,8 +433,6 @@ dl,
 figure,
 table,
 p,
-ul,
-ol,
 form {
   margin-bottom: 2.5rem;
 }
@@ -444,15 +446,14 @@ hr {
 /* UTILITIES */
 /* Text
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.has-text-small,
-.has-text-meta {
+.has-text-small {
   font-size: 0.7em !important;
 }
 .has-text-large {
-  font-size: 2em !important;
+  font-size: 1.8em !important;
 }
 .has-text-larger {
-  font-size: 3.5em !important;
+  font-size: 3.2em !important;
 }
 .has-text-default {
   color: #f8f8f8 !important;
@@ -476,7 +477,7 @@ hr {
   text-align: left !important;
 }
 .has-text-right {
-  text-align: righ !important;
+  text-align: right !important;
 }
 .has-text-justify {
   text-align: justify !important;
@@ -487,7 +488,11 @@ hr {
 .has-text-italic {
   font-style: italic !important;
 }
+.has-text-underline{
+  text-decoration: underline;
+}
 .has-text-meta {
+  font-size: .4em !important;
   color: #c5c5c5 !important;
 }
 /* Padding
@@ -566,48 +571,38 @@ hr {
   background: #f8f8f8 !important;
 }
 .has-border-default {
-  border-color: #f8f8f8 !important;
+  border: 1px #f8f8f8 solid !important;
 }
 .has-background-primary {
   background: #44d3ff !important;
 }
 .has-border-primary {
-  border-color: #44d3ff !important;
+  border: 1px #44d3ff solid !important;
 }
 .has-background-success {
   background: #36ff73 !important;
 }
 .has-border-success {
-  border-color: #36ff73 !important;
+  border: 1px #36ff73 solid !important;
 }
 .has-background-warning {
   background: #ecff43 !important;
 }
 .has-border-warning {
-  border-color: #ecff43 !important;
+  border: 1px #ecff43 solid !important;
 }
 .has-background-error {
   background: #f34141 !important;
 }
 .has-border-error {
-  border-color: #f34141 !important;
+  border: 1px #f34141 solid !important;
 }
 /* Misc.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .has-animation * {
   transition: all 0.8s ease !important;
 }
-.is-pull-left {
-  float: left;
-}
-.is-pull-right {
-  float: right;
-}
-.has-clearfix {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 [class*="has-hero"] {
   margin: 0;
   width: 100%;

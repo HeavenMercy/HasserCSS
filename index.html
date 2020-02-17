@@ -29,12 +29,14 @@
 <body>
     <div class="has-hero"
         style="background-image:url('img/bg.jpg');background-clip:border-box">
-        <div class="hero-body-middle" style="text-align:center">
+        <div class="hero-body-middle has-text-right has-padding-small">
             <h3>
                 <span class="has-text-primary has-text-large"
                     style="text-shadow:8px -4px 10px #000">Hasser CSS</span><br/>
                 <span class="has-text-meta">A new generation
-                    <a href="#">CSS-Only</a> style framework!</span>
+                    CSS-Only style framework!</span><br/>
+                <span class="has-text-meta">view the
+                    <a href="documentation.html">documentation</a>!</span>
             </h3>
         </div>
     </div>
@@ -187,25 +189,36 @@
         </div>
 
         <div>
-            <pre><code>&lt;div&gt;
-    &lt;div class="col-1-6"&gt;
-        &lt;ul&gt;&lt;h5&gt;List of Friends&lt;/h5&gt;
-            &lt;li&gt;John Doe&lt;/li&gt;
-            &lt;li&gt;Esk Quiss&lt;/li&gt;
-            &lt;li&gt;Foo Bar&lt;/li&gt;
-        &lt;/ul&gt;
+            <pre class="has-border-primary"><code>
+&lt;!-- .container is main centered wrapper --&gt;
+&lt;div class="container"&gt;
+
+    &lt;!-- columns should be the immediate child of a .row --&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="one column"&gt;One&lt;/div&gt;
+      &lt;div class="eleven columns"&gt;Eleven&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="col-4-6"&gt;
-        &lt;!-- I am here ! --&gt;
+
+    &lt;!-- just use a number and class 'column' or 'columns' --&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="two columns"&gt;Two&lt;/div&gt;
+      &lt;div class="ten columns"&gt;Ten&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="col-1-6"&gt;
-        &lt;ol&gt;&lt;h5&gt;Todo List&lt;/h5&gt;
-            &lt;li&gt;Buy a Car&lt;/li&gt;
-            &lt;li&gt;Build a House&lt;/li&gt;
-            &lt;li&gt;Be Proud&lt;/li&gt;
-        &lt;/ol&gt;
+
+    &lt;!-- there are a few shorthand columns widths as well --&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="one-third column"&gt;1/3&lt;/div&gt;
+      &lt;div class="two-thirds column"&gt;2/3&lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    &lt;div class="row"&gt;
+      &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
+      &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) --&gt;
+            </code></pre>
         </div>
     </div>
 

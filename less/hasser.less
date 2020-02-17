@@ -174,7 +174,7 @@ input[type="reset"],
 input[type="button"],
 [class*="has-button"] > :first-child,
 [class*="is-button"] {
-    // height: 38px;
+    height: 38px;
     padding: 0 30px;
     font-size: 11px;
     font-weight: 600;
@@ -191,6 +191,8 @@ input[type="button"],
     cursor: pointer;
     outline: none;
 }
+
+[class*="has-button"] { display: inline-block; }
 
 each(@style_classes, {
     .has-button-@{key} > :first-child,
@@ -304,7 +306,7 @@ table.has-table-style {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button, [class*="is-button"], [class*="has-button"] > :first-child { margin-bottom: 1rem; }
 input, textarea, select, fieldset { margin-bottom: 1.5rem; }
-pre, blockquote, dl, figure, table, p, ul, ol, form { margin-bottom: 2.5rem; }
+pre, blockquote, dl, figure, table, p, form { margin-bottom: 2.5rem; }
 
 
 
@@ -322,8 +324,8 @@ hr {
 /* Text
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .has-text-small { font-size: .7em !important; }
-.has-text-large { font-size: 2em !important; }
-.has-text-larger { font-size: 3.5em !important; }
+.has-text-large { font-size: 1.8em !important; }
+.has-text-larger { font-size: 3.2em !important; }
 
 each(@style_classes, { // text colors
     .has-text-@{key} { color: @value !important; }
@@ -331,12 +333,14 @@ each(@style_classes, { // text colors
 
 .has-text-center { text-align: center !important; }
 .has-text-left { text-align: left !important; }
-.has-text-right { text-align: righ !important; }
+.has-text-right { text-align: right !important; }
 .has-text-justify { text-align: justify !important; }
 
 .has-text-bold{ font-weight: 600 !important; }
 .has-text-italic{ font-style: italic !important; }
-.has-text-meta:extend( .has-text-small ) {
+.has-text-underline{ text-decoration: underline; }
+.has-text-meta {
+    font-size: .4em !important;
     color: darken(@bright_color, @color_affect_percent*2) !important; }
 
 
@@ -393,7 +397,7 @@ each(@style_classes, { // text colors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 each(@style_classes, {
     .has-background-@{key} { background: @value !important; }
-    .has-border-@{key} { border-color: @value !important; }
+    .has-border-@{key} { border: 1px @value solid !important; }
 })
 
 
@@ -401,9 +405,6 @@ each(@style_classes, {
 /* Misc.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .has-animation * { transition: all .8s ease !important; }
-.is-pull-left { float: left; }
-.is-pull-right { float: right; }
-.has-clearfix { content: ""; display: table; clear: both; }
 
 [class*="has-hero"] {
     margin: 0;

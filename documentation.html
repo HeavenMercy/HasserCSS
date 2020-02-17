@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasser CSS | Documentation</title>
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/hasser.css" />
+
+    <link rel="stylesheet" href="css/agate.css">
+    <style>
+        pre > code { max-height: 250px; }
+        h5 { text-decoration: underline; }
+        body { overflow: hidden; }
+
+        .block {
+            min-height: 30px;
+            margin: 2px;
+            background-color: #efefef; }
+        .page-block{ padding: 50px 0; }
+        .text-presentation > span{ margin-right: 20px; }
+
+        @media (max-width: 861px) {
+            #toc { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="hero" class="has-hero has-background-default">
+        <div class="has-text-large has-padding">
+            <h1 class="">
+                Hasser CSS <br/>
+                <span class="has-text-meta">A lite and flexible CSS framework. Meta text thanks to <code>.has-text-meta</code>, see <a href="#text">text style</a>.</span>
+            </h1>
+
+            <pre><code class="has-text-small">
+    &lt;!-- hero can have classes 'has-hero', 'has-hero-top' or 'has-hero-bottom' --&gt;
+
+    &lt;div class="has-hero"&gt;
+        &lt;div&gt;
+            &lt;!-- the content of the hero here --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+            </code></pre>
+
+            <div class="has-text-center">
+                <a href="#page" class="is-button-primary">Open Documentation</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="toc" class="col-1-6">
+        <ul class="has-padding-large">
+            <h6>Table of Contents (<a href="#hero">Close</a>)</h6>
+
+            <li><a href="#grid">Grid</a>
+            </li>
+            <li><a href="#button">Button</a>
+                <ul>
+                    <li><a href="#button-base">Base Classes</a></li>
+                    <li><a href="#button-wrapper">Wrapper Classes</a></li>
+                </ul>
+            </li>
+            <li><a href="#text">Text</a>
+                <ul>
+                    <li><a href="#text-size">Text Size</a></li>
+                    <li><a href="#text-color">Text Color</a></li>
+                    <li><a href="#text-align">Text Alignment</a></li>
+                    <li><a href="#text-style">Text Style</a></li>
+                </ul>
+            </li>
+            <li><a href="#bg-border">Background &amp; Border</a>
+                <ul>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#border">Border</a></li>
+                </ul>
+            </li>
+            <li><a href="#utilities">Utilities</a>
+                <ul>
+                    <li><a href="#padding">Padding</a></li>
+                    <li><a href="#margin">Margin</a></li>
+                    <li><a href="#misc">Miscellaneous</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="page" class="col-5-6">
+        <div class="has-hero-top" style="overflow:auto">
+            <div>
+                <div id="intro">
+                    <p>This <strong>CSS-Only</strong> framework is mainly inspired by <a href="http://getskeleton.com/">Skeleton CSS</a> and born in the need to apply a custom style on the <code>&lt;input type="submit" /&gt;</code> or any button-like input of a Symfony form. So, without messing with the inner functionnality of any framework returning such a button not-accessible button-tag, it is possible to <a href="#button">apply a button style</a> it.</p>
+                    <p>Then, <em>much more classes</em> came to be friends with the lonely background classes of buttons. And now we have a big but <strong>lite</strong> family of classes called <strong>Hasser CSS</strong>.</p>
+
+                    <p>Plus: Tags have a default style to keep the <em>harmony</em> between them althrough the page.</p>
+                </div>
+
+                <div id="grid" class="page-block">
+                    <h1>Grid</h1> <hr/>
+
+                    <p>
+                        The grid is wide of 6 columns, each column having class <code>.col-*-6</code>. The columns are dynamically resized based on the screen of the user. <br/>
+                        To disable the the dynamic resizing of a column, append to its class <code>-noresp</code>, and the column will have the same size on all the screens.
+                    </p>
+
+                    <div>
+                        <div class="col-4-6">
+                            <div class="col-4-6">
+                                <div class="block"></div>
+                            </div>
+                            <div class="col-2-6">
+                                <div class="block"></div>
+                            </div>
+                        </div>
+                        <div class="col-1-6"></div>
+                        <div class="col-1-6">
+                            <div class="block"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-1-6">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6"></div>
+                        <div class="col-1-6">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6">
+                            <div class="block"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="col-1-6-noresp">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block"></div>
+                        </div>
+                    </div>
+
+                    <pre><code>
+    &lt;!-- '.block' is a custom class to style the blocks in the grid --&gt;
+    &lt;div&gt;
+        &lt;div class="col-4-6"&gt;
+            &lt;div class="col-4-6"&gt;
+                &lt;div class="block"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-2-6"&gt;
+                &lt;div class="block"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6"&gt;
+            &lt;!-- For An offset --&gt;
+            &lt;!-- &lt;div class="block"&gt;&lt;/div&gt; --&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="col-1-6"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6"&gt;&lt;/div&gt;
+        &lt;div class="col-1-6"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- these columns are not responsive --&gt;
+    &lt;div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                    </code></pre>
+                </div>
+
+                <div id="button" class="page-block">
+                    <h1>Buttons</h1> <hr/>
+                    <p>To set the main style of buttons</p>
+
+                    <h5 id="button-base">Base classes</h5>
+                    <p>Those classes are directly passed on tag that must have a button style</p>
+
+                    <div>
+                        <button class="is-button-default">.is-button-default</button>
+                        <button class="is-button-primary">.is-button-primary</button>
+                        <button class="is-button-success">.is-button-success</button>
+                        <button class="is-button-error">.is-button-error</button>
+                        <button class="is-button-warning">.is-button-warning</button>
+                    </div>
+
+                    <pre><code>
+    &lt;div&gt;
+        &lt;button&gt;no base class&lt;/button&gt; &lt;br/&gt;
+        &lt;button class="is-button-default"&gt;.is-button-default&lt;/button&gt;
+        &lt;button class="is-button-primary"&gt;.is-button-primary&lt;/button&gt;
+        &lt;button class="is-button-success"&gt;.is-button-success&lt;/button&gt;
+        &lt;button class="is-button-error"&gt;.is-button-error&lt;/button&gt;
+        &lt;button class="is-button-warning"&gt;.is-button-warning&lt;/button&gt;
+    &lt;/div&gt;
+                    </code></pre>
+
+                    <br/><br/>
+
+                    <h5 id="button-wrapper">Wrapper classes</h5>
+                    <p>Those classes are passed to a wrapping tag and target the first child tag to apply the button style on</p>
+
+                    <div>
+                        <div class="has-button-default"><button>.has-button-default</button></div>
+                        <div class="has-button-primary"><button>.has-button-primary</button></div>
+                        <div class="has-button-success"><button>.has-button-success</button></div>
+                        <div class="has-button-error"><button>.has-button-error</button></div>
+                        <div class="has-button-warning"><button>.has-button-warning</button></div>
+                    </div>
+
+                    <pre><code>
+    &lt;div&gt;
+        &lt;div class="has-button-default"&gt;&lt;button&gt;.has-button-default&lt;/button&gt;&lt;/div&gt;
+        &lt;div class="has-button-primary"&gt;&lt;button&gt;.has-button-primary&lt;/button&gt;&lt;/div&gt;
+        &lt;div class="has-button-success"&gt;&lt;button&gt;.has-button-success&lt;/button&gt;&lt;/div&gt;
+        &lt;div class="has-button-error"&gt;&lt;button&gt;.has-button-error&lt;/button&gt;&lt;/div&gt;
+        &lt;div class="has-button-warning"&gt;&lt;button&gt;.has-button-warning&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+                    </code></pre>
+                </div>
+
+                <div id="text" class="page-block">
+                    <h1>Texts</h1> <hr/>
+                    <p>To set the appearance of a text</p>
+
+                    <h5 id="text-size">Size</h5>
+                    <p>Those classes affects the size of a text</p>
+
+                    <div class="text-presentation">
+                        <span class="has-text-small">Small</span>
+                        <span>Normal</span>
+                        <span class="has-text-large">Large</span>
+                        <span class="has-text-larger">Larger</span>
+                    </div>
+
+                    <pre><code>
+    &lt;div&gt;
+        &lt;span class="has-text-small"&gt;Small&lt;/span&gt;
+        &lt;span&gt;Normal&lt;/span&gt;
+        &lt;span class="has-text-large"&gt;Large&lt;/span&gt;
+        &lt;span class="has-text-larger"&gt;Larger&lt;/span&gt;
+    &lt;/div&gt;
+                    </code></pre>
+
+                    <br/><br/>
+
+                    <h5 id="text-color">Color</h5>
+                    <p>Those classes affects the color of a text</p>
+
+                    <div class="text-presentation">
+                        <span class="has-text-default">.has-text-default</span>
+                        <span class="has-text-primary">.has-text-primary</span>
+                        <span class="has-text-success">.has-text-success</span>
+                        <span class="has-text-error">.has-text-error</span>
+                        <span class="has-text-warning">.has-text-warning</span>
+                    </div>
+
+                    <pre><code>
+    &lt;div&gt;
+        &lt;span class="has-text-default"&gt;.has-text-default&lt;/span&gt;
+        &lt;span class="has-text-primary"&gt;.has-text-primary&lt;/span&gt;
+        &lt;span class="has-text-success"&gt;.has-text-success&lt;/span&gt;
+        &lt;span class="has-text-error"&gt;.has-text-error&lt;/span&gt;
+        &lt;span class="has-text-warning"&gt;.has-text-warning&lt;/span&gt;
+    &lt;/div&gt;
+                    </code></pre>
+
+                    <br/><br/>
+
+                    <h5 id="text-align">Alignment</h5>
+                    <p class="has-text-justify">Those classes affects the alignment of a text. This text is <span class="has-text-bold">justified</span> using the class <code>.has-text-justify</code>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <div class="text-presentation">
+                        <p class="has-text-left">Text to the <span class="has-text-bold">left</strong></p>
+                        <p class="has-text-center">Text to the <span class="has-text-bold">center</strong></p>
+                        <p class="has-text-right">Text to the <span class="has-text-bold">right</strong></p>
+                    </div>
+
+                    <pre><code>
+    &lt;div&gt;
+        &lt;p class="has-text-left"&gt;Text to the left&lt;/p&gt;
+        &lt;p class="has-text-center"&gt;Text to the center&lt;/p&gt;
+        &lt;p class="has-text-right"&gt;Text to the right&lt;/p&gt;
+    &lt;/div&gt;
+                    </code></pre>
+
+                    <br/><br/>
+
+                    <h5 id="text-style">Style</h5>
+                    <div>Those classes affects the style of a text.</div>
+
+                    <div class="has-text-large text-presentation">
+                        <span class="has-text-bold">Bold</span>
+                        <span class="has-text-italic">Italic</span>
+                        <span class="has-text-underline">underline</span>
+                    </div>
+
+                    <pre><code>
+    &lt;div&gt;
+        &lt;span class="has-text-meta"&gt;Meta&lt;/span&gt;
+        &lt;span class="has-text-bold"&gt;Bold&lt;/span&gt;
+        &lt;span class="has-text-italic"&gt;Italic&lt;/span&gt;
+        &lt;span class="has-text-underline"&gt;underline&lt;/span&gt;
+    &lt;/div&gt;
+                    </code></pre>
+                </div>
+
+                <div id="bg-border">
+                    <h1>Background &amp; Border</h1> <hr/>
+                    <p>To set the background or border of a block</p>
+
+                    <h5 id="background">Brackground</h5>
+                    <p>Those classes set the background</p>
+
+                    <div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-background-default"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-background-primary"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-background-success"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-background-error"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-background-warning"></div>
+                        </div>
+                    </div>
+
+                    <pre><code>
+    &lt;!-- 'block' is a custom class to style the blocks --&gt;
+    &lt;div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-background-default"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-background-primary"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-background-success"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-background-error"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-background-warning"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                    </code></pre>
+
+                    <br/><br/>
+
+                    <h5 id="border">Border</h5>
+                    <p>Those classes set the border</p>
+
+                    <div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-border-default"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-border-primary"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-border-success"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-border-error"></div>
+                        </div>
+                        <div class="col-1-6-noresp">
+                            <div class="block has-border-warning"></div>
+                        </div>
+                    </div>
+
+                    <pre><code>
+    &lt;!-- 'block' is a custom class to style the blocks --&gt;
+    &lt;div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-border-default"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-border-primary"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-border-success"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-border-error"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-1-6-noresp"&gt;
+            &lt;div class="block has-border-warning"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                    </code></pre>
+                </div>
+
+                <div id="utilities">
+                    <h1>Utilities</h1> <hr/>
+                    <p>There are more classes to shape the appearance of a tag</p>
+
+                    <h5 id="padding">Padding</h5>
+                    <ul>
+                        <li>it is possible to set padding: <code>.has-padding</code>, <code>.has-padding-large</code>, <code>.has-padding-larger</code></li>
+                        <li>It is also possible to unset padding: <code>.has-no-padding</code>, <code>.has-no-padding-left</code>, <code>.has-no-padding-right</code>, <code>.has-no-padding-bottom</code>, <code>.has-no-padding-top</code></li>
+                    </ul>
+
+                    <br/><br/>
+
+                    <h5 id="margin">Margin</h5>
+                    <ul>
+                        <li>it is possible to set margin: <code>.has-margin</code>, <code>.has-margin-large</code>, <code>.has-margin-larger</code></li>
+                        <li>It is also possible to unset margin: <code>.has-no-margin</code>, <code>.has-no-margin-left</code>, <code>.has-no-margin-right</code>, <code>.has-no-margin-bottom</code>, <code>.has-no-margin-top</code></li>
+                    </ul>
+
+                    <br/><br/>
+
+                    <h5 id="misc">Miscellaneous</h5>
+                    <ul>
+                        <li>To activate animation in a block: <code>.has-animation</code></li>
+                        <li>To define a hero page (see <a href="#hero">the Hero cover</a>): <code>.has-hero</code>, <code>.has-hero-top</code>, <code>.has-hero-bottom</code></li>
+                    </ul>
+                </div>
+
+                <div style="padding: 100px 0">
+                    <div class="has-text-center">
+                        <a href="documentation.html">Hasser CSS</a>
+                        &copy; <script>document.write(new Date().getFullYear())</script>
+                        <br /><br />
+                        Inspired By <a href="http://getskeleton.com/">Skeleton CSS</a>!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
