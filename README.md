@@ -21,3 +21,5 @@ Don't hesitate to notice me about any issue, so that I can fix it quickly. <br/>
 And you can send me any request or suggestion. <br/>
 
 Good luck !
+
+PS: If you like that framework, please spread the word ! I am not yet popular.
