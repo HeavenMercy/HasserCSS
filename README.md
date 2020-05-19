@@ -14,12 +14,12 @@ It was difficult to apply a style on a Symfony form without having to create a b
 + Has a flexible 6 column grid designed on/for desktop and automatically adapted for the the other screens. For rigid/static/"not flexible" column, append '-noresp' to the column class.
 + Has a hero style, a &lt;div/&gt; that will take all the page width and height
 
-*To see all the available class, consult the file 'hasser_repert.txt'*
+*To see all the available class, consult the file 'hasser_repert.txt'* <br/>
 *To see the framework in action, open the file 'documentation.html'*
 
-Don't hesitate to notice me about any issue, so that I can fix it quickly. <br/>
+Don't hesitate to notify me of any issue, so that I can fix it quickly. <br/>
 And you can send me any request or suggestion. <br/>
 
 Good luck !
 
-PS: If you like that framework, please spread the word ! I am not yet popular.
+PS: If you like that framework, please spread the word ! I am not yet popular :lol:.
