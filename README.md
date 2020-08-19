@@ -22,4 +22,6 @@ And you can send me any request or suggestion. <br/>
 
 Good luck !
 
-PS: If you like that framework, please spread the word ! I am not yet popular :lol:.
+PS: - If you like that framework, please spread the word ! I am not yet popular :lol:.
+    - Don't hesitate to send a link of a project of yours using this framework (dick_claudel@yahoo.fr)
+    - Little Self-Promotion: I also have a little project in PHP... Give it a try (https://github.com/HeavenMercy/PDONoSQL)
